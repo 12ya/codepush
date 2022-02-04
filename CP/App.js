@@ -7,12 +7,15 @@
  */
 
 import React from 'react';
-import type { Node } from 'react';
+
+import codePush from 'react-native-code-push';
+const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
+
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({ children, title }): Node => {
+const Section = ({ children, title }) => {
     const isDarkMode = useColorScheme() === 'dark';
     return (
         <View style={styles.sectionContainer}>
@@ -40,7 +43,7 @@ const Section = ({ children, title }): Node => {
     );
 };
 
-const App: () => Node = () => {
+const App = () => {
     const isDarkMode = useColorScheme() === 'dark';
 
     const backgroundStyle = {
@@ -93,4 +96,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default App;
+export default codePush(codePushOptions)(App);

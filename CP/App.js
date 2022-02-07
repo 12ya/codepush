@@ -12,6 +12,7 @@ import codePush from 'react-native-code-push';
 const codePushOptions = {
     checkFrequency: codePush.CheckFrequency.ON_APP_START,
     updateDialog: true,
+
     installMode: codePush.InstallMode.IMMEDIATE,
     deploymentKey: 'ba90Po1f1iUU3VQOfIfNADX2yespm5gxiMfrA',
 };

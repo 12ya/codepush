@@ -14,7 +14,7 @@ const codePushOptions = {
     updateDialog: true,
 
     installMode: codePush.InstallMode.IMMEDIATE,
-    
+
     deploymentKey: 'ba90Po1f1iUU3VQOfIfNADX2yespm5gxiMfrA',
 };
 
@@ -40,8 +40,10 @@ const App = () => {
                     }}
                 >
                     <Text style={{ alignSelf: 'center', fontSize: 20, color: 'purple' }}>Codepushed</Text>
+                    <Text style={{ alignSelf: 'center', fontSize: 20, color: 'purple' }}>Codepushed2222</Text>
                 </View>
             </ScrollView>
+            <Text>testing</Text>
         </SafeAreaView>
     );
 };

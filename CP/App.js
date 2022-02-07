@@ -9,18 +9,24 @@
 import React, { useEffect } from 'react';
 
 import codePush from 'react-native-code-push';
+
+import { Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+
+import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
+
+const depKey = Platform.select({
+    ios: 'ba90Po1f1iUU3VQOfIfNADX2yespm5gxiMfrA',
+    android: '1dWI86hQORciK3tRv4T4fALmOQJlUO9Gr1uVB',
+});
+
 const codePushOptions = {
     checkFrequency: codePush.CheckFrequency.ON_APP_START,
     updateDialog: true,
 
     installMode: codePush.InstallMode.IMMEDIATE,
 
-    deploymentKey: 'ba90Po1f1iUU3VQOfIfNADX2yespm5gxiMfrA',
+    deploymentKey: depKey,
 };
-
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-
-import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -44,6 +50,7 @@ const App = () => {
                 </View>
             </ScrollView>
             <Text>testing</Text>
+            <Text>code push testing on android</Text>
         </SafeAreaView>
     );
 };

@@ -2,6 +2,6 @@
     <string name="app_name">CP</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    <string moduleConfig="true" name="CodePushDeploymentKey">DeploymentKey</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">1dWI86hQORciK3tRv4T4fALmOQJlUO9Gr1uVB</string>
 
 </resources>
